@@ -1,0 +1,243 @@
+html * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #292929;
+}
+
+@-webkit-keyframes hover_shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  33% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  66% {
+    -webkit-transform: rotateZ(6deg);
+            transform: rotateZ(6deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes hover_shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  33% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  66% {
+    -webkit-transform: rotateZ(6deg);
+            transform: rotateZ(6deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+html .container, html .wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+html .container {
+  padding: 0px 12px;
+}
+
+html .wrapper {
+  padding: 12px 12px;
+}
+
+html .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html h1 {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  font-size: 42px;
+}
+
+html p, html span, html a, html input {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+html h2, html h3, html h4, html h5, html h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+html a {
+  text-decoration: none;
+}
+
+html i:hover {
+  -webkit-animation-name: hover_shake;
+          animation-name: hover_shake;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+html input[type="submit"] {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+html input[type="submit"]:hover {
+  background: #9E9E9E;
+}
+
+html input {
+  display: block;
+  font-size: 20px;
+}
+
+html input:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+html input:not([type="submit"]) {
+  width: 100%;
+  border: 1px solid #9E9E9E;
+  padding: 12px 6px;
+}
+
+html input[type="submit"] {
+  border: none;
+  background: #292929;
+  color: white;
+  cursor: pointer;
+  padding: 12px 48px;
+}
+
+html body {
+  background: #EBEBEB;
+}
+
+html body header {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+html body header .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body header .container .row:first-child {
+  padding: 12px 0px;
+}
+
+html body header .container .row:first-child .col:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+html body header .container .row:first-child .col:first-child img {
+  margin-right: 24px;
+}
+
+html body header .container .row:last-child nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body header .container .row:last-child nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+html body header .container .row:last-child nav ul li a h6 {
+  display: block;
+  padding: 6px 12px;
+}
+
+html body header .container .row:last-child nav ul li a .line {
+  height: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+html body header .container .row:last-child nav ul li a .line.hover {
+  background: #FB6500;
+  width: 0%;
+  float: left;
+}
+
+html body header .container .row:last-child nav ul li a .line.active {
+  background: #292929;
+  width: 100%;
+  float: right;
+}
+
+html body header .container .row:last-child nav ul li a:hover .line.hover {
+  width: 100%;
+}
+
+html body header .container .row:last-child nav ul li a:hover .line.active {
+  width: 0%;
+}
+
+html body header .container .row:last-child nav ul:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+html body header .container .row:last-child nav ul:first-child li {
+  margin-right: 36px;
+}
+
+html body form {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+html body form .wrapper {
+  padding: 24px;
+}
+
+html body form .wrapper .head {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+html body form .wrapper .body {
+  padding-top: 12px;
+}
+/*# sourceMappingURL=app.css.map */

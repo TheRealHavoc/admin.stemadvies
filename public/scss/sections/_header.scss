@@ -1,0 +1,30 @@
+header {
+    background: $white;
+    box-shadow: $shadow;
+    .container {
+        .row {
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+                .col {
+                    &:first-child {
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                        img {
+                            margin-right: 24px;
+                        }
+                        h1 {
+         
+                        }
+                    }
+                }
+                padding: 12px 0px;
+            }
+            &:last-child {
+                @import 'navigation';
+            }
+        }
+    }
+}

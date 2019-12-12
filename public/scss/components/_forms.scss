@@ -1,0 +1,22 @@
+input {
+    display: block;
+    font-size: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+input:not([type="submit"]) {
+    width: 100%;
+    border: 1px solid $darkgrey;
+    padding: 12px 6px;
+}
+
+input[type="submit"] {
+    border: none;
+    background: $black;
+    color: white;
+    cursor: pointer;
+    padding: 12px 48px;
+}

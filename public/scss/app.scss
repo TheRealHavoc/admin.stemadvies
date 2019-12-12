@@ -1,0 +1,20 @@
+@import 'components/variables';
+html {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: $black;
+    }
+    
+    @import 'components/animations';
+    @import 'components/container';
+    @import 'components/typography';
+    @import 'components/forms';
+
+    body {
+        background: $lightgrey;
+        @import 'sections/header';
+        @import 'sections/form';
+    }
+}

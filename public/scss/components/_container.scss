@@ -1,0 +1,20 @@
+.container, .wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0px 12px;
+}
+
+.wrapper {
+    padding: 12px 12px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

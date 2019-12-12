@@ -1,0 +1,35 @@
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    font-size: 42px;
+}
+
+p, span, a, input {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    &:hover {
+        animation-name: hover_shake;
+        animation-duration: 0.3s;
+    }
+}
+
+input[type="submit"] {
+    transition: 0.2s;
+    &:hover {
+        background: $darkgrey;
+    }
+}

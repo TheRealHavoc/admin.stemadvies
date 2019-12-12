@@ -1,0 +1,16 @@
+form {
+    background: $white;
+    box-shadow: $shadow;
+    width: 400px;
+
+    .wrapper {
+        padding: 24px;
+        .head {
+            padding-bottom: 12px;
+            border-bottom: 1px solid $lightgrey;
+        }
+        .body {
+            padding-top: 12px;
+        }
+    }
+}
