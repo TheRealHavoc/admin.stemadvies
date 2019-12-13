@@ -95,24 +95,20 @@ html i:hover {
           animation-duration: 0.3s;
 }
 
-html .input input {
+html input {
+  outline: none;
   display: block;
   font-size: 20px;
 }
 
-html .input input:not(:placeholder-shown) {
+html input:not(:placeholder-shown) {
   background-color: #EBEBEB;
-}
-
-html .input:not(:last-child) {
-  margin-bottom: 12px;
 }
 
 html input:not([type="submit"]) {
   width: 100%;
   border: none;
   padding: 12px 6px;
-  outline: none;
   background: #EBEBEB;
 }
 

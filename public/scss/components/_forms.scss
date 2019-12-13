@@ -1,21 +1,16 @@
-.input {
-    input {
-        display: block;
-        font-size: 20px;
-    }
-    input:not(:placeholder-shown) {
-        background-color: $lightgrey;
-    }
-    &:not(:last-child) {
-        margin-bottom: 12px;
-    }
+input {
+    outline: none;
+    display: block;
+    font-size: 20px;
+}
+input:not(:placeholder-shown) {
+    background-color: $lightgrey;
 }
 
 input:not([type="submit"]) {
     width: 100%;
     border: none;
     padding: 12px 6px;
-    outline: none;
 
     background: $lightgrey;
 }

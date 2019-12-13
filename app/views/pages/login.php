@@ -1,3 +1,5 @@
+<?php include '../app/models/auth.php'; ?>
+
 <form class="centered" action="" method="POST">
     <div class="wrapper">
         <div class="head">
@@ -18,7 +20,7 @@
             </div>
 
             <div class="row">
-                <input type="submit" value="<?=$page_title?>">
+                <input type="submit" name="login" value="<?=$page_title?>">
                 <a href="/registreren"><span>Nog geen account?</span></a>
             </div>
 
