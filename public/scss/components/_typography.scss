@@ -26,10 +26,3 @@ i {
         animation-duration: 0.3s;
     }
 }
-
-input[type="submit"] {
-    transition: 0.2s;
-    &:hover {
-        background: $darkgrey;
-    }
-}

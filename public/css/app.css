@@ -95,36 +95,76 @@ html i:hover {
           animation-duration: 0.3s;
 }
 
-html input[type="submit"] {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-html input[type="submit"]:hover {
-  background: #9E9E9E;
-}
-
-html input {
+html .input input {
   display: block;
   font-size: 20px;
 }
 
-html input:not(:last-child) {
+html .input input:not(:placeholder-shown) {
+  background-color: #EBEBEB;
+}
+
+html .input:not(:last-child) {
   margin-bottom: 12px;
 }
 
 html input:not([type="submit"]) {
   width: 100%;
-  border: 1px solid #9E9E9E;
+  border: none;
   padding: 12px 6px;
+  outline: none;
+  background: #EBEBEB;
 }
 
 html input[type="submit"] {
-  border: none;
+  border: 1px solid transparent;
   background: #292929;
   color: white;
   cursor: pointer;
   padding: 12px 48px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+html input[type="submit"]:hover {
+  background: #EBEBEB;
+  border: 1px solid #9E9E9E;
+  color: #292929;
+}
+
+html .input input {
+  display: block;
+  font-size: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+html .input input:focus {
+  background: #EBEBEB;
+}
+
+html .input input:not(:placeholder-shown) {
+  background-color: #FFFFFF;
+}
+
+html .input:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+html .input input:focus + .focus {
+  width: 100%;
+}
+
+html .input .line {
+  height: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+html .input .line.focus {
+  background: #292929;
+  width: 0%;
+  float: left;
 }
 
 html body {
@@ -225,7 +265,7 @@ html body form {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 560px;
 }
 
 html body form .wrapper {
@@ -234,10 +274,22 @@ html body form .wrapper {
 
 html body form .wrapper .head {
   padding-bottom: 12px;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #9E9E9E;
 }
 
 html body form .wrapper .body {
   padding-top: 12px;
+}
+
+html body form .wrapper .body .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=app.css.map */

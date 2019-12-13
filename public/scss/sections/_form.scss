@@ -1,16 +1,22 @@
 form {
     background: $white;
     box-shadow: $shadow;
-    width: 400px;
+    width: 560px;
 
     .wrapper {
         padding: 24px;
         .head {
             padding-bottom: 12px;
-            border-bottom: 1px solid $lightgrey;
+            border-bottom: 1px solid $darkgrey;
         }
         .body {
             padding-top: 12px;
+
+            .row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
 }

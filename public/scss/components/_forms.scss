@@ -1,7 +1,11 @@
-input {
-    display: block;
-    font-size: 20px;
-
+.input {
+    input {
+        display: block;
+        font-size: 20px;
+    }
+    input:not(:placeholder-shown) {
+        background-color: $lightgrey;
+    }
     &:not(:last-child) {
         margin-bottom: 12px;
     }
@@ -9,14 +13,54 @@ input {
 
 input:not([type="submit"]) {
     width: 100%;
-    border: 1px solid $darkgrey;
+    border: none;
     padding: 12px 6px;
+    outline: none;
+
+    background: $lightgrey;
 }
 
 input[type="submit"] {
-    border: none;
+    border: 1px solid transparent;
     background: $black;
     color: white;
     cursor: pointer;
     padding: 12px 48px;
+
+    transition: all 0.2s;
+    &:hover {
+        background: $lightgrey;
+        border: 1px solid $darkgrey;
+        color: $black;
+    }
+}
+
+.input {
+    input {
+        display: block;
+        font-size: 20px;
+        transition: 0.2s;
+        &:focus {
+            background: $lightgrey;
+        }
+    }
+    input:not(:placeholder-shown) {
+        background-color: $white;
+    }
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    input:focus + .focus{
+        width: 100%;
+    }
+    
+    .line {
+        height: 3px;
+        transition: 0.2s;
+        &.focus {
+            background: $black;
+            width: 0%;
+            float: left;
+        }
+    }
 }

@@ -5,7 +5,7 @@
     if (empty($_SESSION['user'])) {
 
         switch($url[0]) {
-            case "inloggen":
+            case "":
                 $requested_page = '../app/views/pages/login.php';
                 $page_title = 'Inloggen';
                 break;
@@ -14,10 +14,12 @@
                 $requested_page = '../app/views/pages/register.php';
                 $page_title = 'Registreren';
                 break;
-        }
 
-        $requested_page = '../app/views/pages/login.php';
-        $page_title = 'Thuispagina';
+            default:
+                $requested_page = '../app/views/pages/404.php';
+                $page_title = ':/';
+                break;  
+        }
 
     } else {
 
@@ -39,11 +41,6 @@
                 break;
             
             case "":
-                $requested_page = '../app/views/pages/parties.php';
-                $page_title = 'Partijen';
-                break;
-    
-            case "/":
                 $requested_page = '../app/views/pages/parties.php';
                 $page_title = 'Partijen';
                 break;
