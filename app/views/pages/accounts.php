@@ -26,13 +26,14 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><h2>ID</h2></th>
-                            <th><h2>Gebruiker</h2></th>
-                            <th><h2>Voornaam</h2></th>
-                            <th><h2>Achternaam</h2></th>
-                            <th><h2>Aangemaakt op</h2></th>
-                            <th><h2>Bewerkt op</h2></th>
-                            <th><h2>Laatste login</h2></th>
+                            <th id="id"><h2>ID</h2></th>
+                            <th id="username"><h2>Gebruiker</h2></th>
+                            <th id="firstname"><h2>Voornaam</h2></th>
+                            <th id="lastname"><h2>Achternaam</h2></th>
+                            <th id="created_on"><h2>Aangemaakt op</h2></th>
+                            <th id="last_edited"><h2>Bewerkt op</h2></th>
+                            <th id="last_login"><h2>Laatste login</h2></th>
+                            <th id="misc"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,13 +46,14 @@
 
                         <?php foreach ($res as $user): ?>
                             <tr>
-                                <td><span><?=$user[0];?></span></td>
-                                <td><span><?=$user[1];?></span></td>
-                                <td><span><?=$user[2];?></span></td>
-                                <td><span><?=$user[3];?></span></td>
-                                <td><span><?=$user[4];?></span></td>
-                                <td><span><?=$user[5];?></span></td>
-                                <td><span><?=$user[6];?></span></td>
+                                <td id="id"><span><?=$user[0];?></span></td>
+                                <td id="username"><span><?=$user[1];?></span></td>
+                                <td id="firstname"><span><?=$user[2];?></span></td>
+                                <td id="lastname"><span><?=$user[3];?></span></td>
+                                <td id="created_on"><span><?=$user[4];?></span></td>
+                                <td id="last_edited"><span><?=$user[5];?></span></td>
+                                <td id="last_login"><span><?=$user[6];?></span></td>
+                                <td id="misc"><a href=""><h2>:</h2></a></td>
                             </tr>
                         <?php endforeach; ?>
 

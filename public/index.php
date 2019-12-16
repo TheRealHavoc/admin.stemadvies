@@ -15,5 +15,9 @@
 
         <?php include $requested_page; ?>
 
+        <script>
+
+        </script>
+
     </body>
 </html>

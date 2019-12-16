@@ -1,8 +1,10 @@
 table {
-    padding: 12px;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
     th, td {
+        padding: 12px;
         &:not(:last-child) {
-            text-align: left;
             padding-right: 12px;
         }
     }
@@ -10,6 +12,33 @@ table {
         
     }
     tbody {
+        tr {
+            &:nth-child(odd) {
+                background: $lightgrey;
+            }
+        }
 
+        #misc {
+            .toggle {
+
+            }
+            .menu {
+                position: absolute;
+                float: right;
+                transform: translate(-110%, calc(-100% + 12px));
+                padding: 12px;
+                z-index: 9;
+                &:nth-child(even) {
+                    background: $lightgrey;
+                }
+            }
+        }
+    }
+
+    #id, #misc {
+        width: 50px;
+    }
+    #created_on, #last_edited, #last_login {
+        width: 220px;
     }
 }
