@@ -21,7 +21,6 @@
 
             <div class="row">
                 <input type="submit" name="login" value="<?=$page_title?>">
-                <a href="/registreren"><span>Nog geen account?</span></a>
             </div>
 
         </div>

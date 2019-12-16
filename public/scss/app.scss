@@ -15,6 +15,9 @@ html {
     body {
         background: $lightgrey;
         @import 'sections/header';
+        @import 'sections/main';
+
         @import 'sections/form';
+        @import 'sections/table';
     }
 }

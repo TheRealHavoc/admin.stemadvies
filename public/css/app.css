@@ -66,13 +66,34 @@ html .centered {
           transform: translate(-50%, -50%);
 }
 
+html .main-head .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .main-head .row .col:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+html .main-table {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
 html h1 {
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 2px;
   font-size: 42px;
 }
 
-html p, html span, html a, html input {
+html p, html span, html a, html input, html button {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -95,7 +116,7 @@ html i:hover {
           animation-duration: 0.3s;
 }
 
-html input {
+html input, html button {
   outline: none;
   display: block;
   font-size: 20px;
@@ -112,19 +133,21 @@ html input:not([type="submit"]) {
   background: #EBEBEB;
 }
 
-html input[type="submit"] {
-  border: 1px solid transparent;
+html input[type="submit"], html button {
+  border: 0px solid transparent;
   background: #292929;
   color: white;
   cursor: pointer;
   padding: 12px 48px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  height: 51px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-html input[type="submit"]:hover {
+html input[type="submit"]:hover, html button:hover {
   background: #EBEBEB;
-  border: 1px solid #9E9E9E;
+  padding: 8px 44px;
+  border: 4px solid #292929;
   color: #292929;
 }
 
@@ -257,6 +280,14 @@ html body header .container .row:last-child nav ul:first-child li {
   margin-right: 36px;
 }
 
+html body main {
+  margin-top: 40px;
+}
+
+html body main .wrapper .head, html body main .wrapper .body {
+  margin-bottom: 12px;
+}
+
 html body form {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
@@ -287,5 +318,14 @@ html body form .wrapper .body .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+html body table {
+  padding: 12px;
+}
+
+html body table th:not(:last-child), html body table td:not(:last-child) {
+  text-align: left;
+  padding-right: 12px;
 }
 /*# sourceMappingURL=app.css.map */

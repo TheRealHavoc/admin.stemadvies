@@ -18,3 +18,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.main-head {
+    .row {
+        display: flex;
+        align-items: center;
+        .col {
+            &:first-child {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+.main-table {
+    background: $white;
+    box-shadow: $shadow;
+    .wrapper {
+
+    }
+}

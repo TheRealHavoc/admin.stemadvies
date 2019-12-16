@@ -10,11 +10,6 @@
                 $page_title = 'Inloggen';
                 break;
 
-            case "registreren":
-                $requested_page = '../app/views/pages/register.php';
-                $page_title = 'Registreren';
-                break;
-
             default:
                 $requested_page = '../app/views/pages/404.php';
                 $page_title = ':/';
