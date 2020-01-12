@@ -25,6 +25,34 @@
                 $page_title = 'Uitloggen';
                 break;
 
+            case "partijen":
+
+                if (@$url[1] === "add") {
+
+                    $requested_page = '../app/views/pages/parties/add.php';
+                    $page_title = 'Partij toevoegen';
+                    break;
+
+                } else if (@$url[1] === "edit") {
+
+                    $pointer = @$url[2];
+
+                    $requested_page = '../app/views/pages/parties/edit.php';
+                    $page_title = 'Partij bewerken';
+                    break;
+
+                } else if (@$url[1] === "delete") {
+
+                    $pointer = @$url[2];
+
+                    $requested_page = '../app/views/pages/parties/delete.php';
+                    $page_title = 'Partij verwijderen';
+                    break;
+
+                }
+
+                break;
+
             case "accounts":
 
                 if (@$url[1] === "add") {
@@ -61,31 +89,6 @@
                 break;
             
             case "":
-
-                if (@$url[1] === "add") {
-
-                    $requested_page = '../app/views/pages/parties/add.php';
-                    $page_title = 'Partij toevoegen';
-                    break;
-
-                } else if (@$url[1] === "edit") {
-
-                    $pointer = @$url[2];
-
-                    $requested_page = '../app/views/pages/parties/edit.php';
-                    $page_title = 'Partij bewerken';
-                    break;
-
-                } else if (@$url[1] === "delete") {
-
-                    $pointer = @$url[2];
-
-                    $requested_page = '../app/views/pages/parties/delete.php';
-                    $page_title = 'Partij verwijderen';
-                    break;
-
-                }
-
                 $requested_page = '../app/views/pages/parties/parties.php';
                 $page_title = 'Partijen';
                 break;

@@ -387,7 +387,9 @@ html body table #misc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50px;
+  text-align: right;
+  max-width: 80px;
+  margin: 0 0 0 auto;
 }
 
 html body table #misc a:first-child {

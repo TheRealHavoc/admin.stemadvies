@@ -48,7 +48,9 @@ table {
 
     #misc {
         display: flex;
-        width: 50px;
+        text-align: right;
+        max-width: 80px;
+        margin: 0 0 0 auto;
         a {
             &:first-child {
                 margin-right: 6px;

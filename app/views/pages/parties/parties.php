@@ -17,7 +17,7 @@
                     <h1><?=$page_title?></h1>
                 </div>
                 <div class="col">
-                    <a href="/accounts/add"><button>+ Nieuw</button></a>
+                    <a href="/partijen/add"><button>+ Nieuw</button></a>
                 </div>
             </div>
         </div>
@@ -27,8 +27,8 @@
                     <thead>
                         <tr>
                             <th id="id"><h2>ID</h2></th>
-                            <th id="username"><h2>Naam</h2></th>
-                            <th id="firstname"><h2>Voorzitter</h2></th>
+                            <th id="name"><h2>Naam</h2></th>
+                            <th id="chairman"><h2>Voorzitter</h2></th>
                             <th id="created_on"><h2>Aangemaakt op</h2></th>
                             <th id="last_edited"><h2>Bewerkt op</h2></th>
                             <th id="misc"></th>
@@ -45,17 +45,17 @@
                         <?php foreach ($res as $key): ?>
                             <tr>
                                 <td id="id"><span><?=$key[0];?></span></td>
-                                <td id="username"><span><?=$key[1];?></span></td>
-                                <td id="firstname"><span><?=$key[2];?></span></td>
+                                <td id="name"><span><?=$key[1];?></span></td>
+                                <td id="chairman"><span><?=$key[2];?></span></td>
                                 <td id="lastname"><span><?=$key[3];?></span></td>
                                 <td id="created_on"><span><?=$key[4];?></span></td>
                                 <td id="misc">
-                                    <a href="/accounts/edit/<?=$key[0];?>">
+                                    <a href="/partijen/edit/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-edit"></i>
                                         </h2>
                                     </a>
-                                    <a href="/accounts/delete/<?=$key[0];?>">
+                                    <a href="/partijen/delete/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-trash-alt"></i>
                                         </h2>
