@@ -1,5 +1,5 @@
 .container, .wrapper {
-    max-width: 1200px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
@@ -28,13 +28,5 @@
                 flex-grow: 1;
             }
         }
-    }
-}
-
-.main-table {
-    background: $white;
-    box-shadow: $shadow;
-    .wrapper {
-
     }
 }

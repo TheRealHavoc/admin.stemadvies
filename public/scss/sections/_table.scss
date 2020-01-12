@@ -7,17 +7,21 @@ table {
         &:not(:last-child) {
             padding-right: 12px;
         }
+        &:last-child {
+            text-align: center;
+        }
     }
     thead {
-        
+        background: $lightgrey;
     }
     tbody {
+        background: $white;
+        box-shadow: $shadow;
         tr {
-            &:nth-child(odd) {
-                background: $lightgrey;
+            &:not(:last-child) {
+                border-bottom: 1px solid $lightgrey;
             }
         }
-
         #misc {
             .toggle {
 
@@ -33,6 +37,9 @@ table {
                 }
             }
         }
+    }
+    tfoot {
+        
     }
 
     #id, #misc {

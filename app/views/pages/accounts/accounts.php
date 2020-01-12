@@ -17,7 +17,7 @@
                     <h1><?=$page_title?></h1>
                 </div>
                 <div class="col">
-                    <button>+ Nieuw</button>
+                    <a href="/accounts/add"><button>+ Nieuw</button></a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 
                         <?php if ($res === false): ?>
                             <tr>
-                                <td colspan="7"><span>Something went wrong.</span></td>
+                                <td colspan="8"><span>Something went wrong.</span></td>
                             </tr>
                         <?php endif; ?>
 
@@ -53,7 +53,7 @@
                                 <td id="created_on"><span><?=$user[4];?></span></td>
                                 <td id="last_edited"><span><?=$user[5];?></span></td>
                                 <td id="last_login"><span><?=$user[6];?></span></td>
-                                <td id="misc"><a href=""><h2>:</h2></a></td>
+                                <td id="misc"><a href="/?edit=ac_<?=$user[0];?>"><h2>:</h2></a></td>
                             </tr>
                         <?php endforeach; ?>
 

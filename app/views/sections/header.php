@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <img src="media/logo.png" alt="Stemadvies" width="80px" height="auto">
+                <img src="../media/logo.png" alt="Stemadvies" width="80px" height="auto">
                 <h1>Stemadvies</h1>
             </div>
             <div class="col">

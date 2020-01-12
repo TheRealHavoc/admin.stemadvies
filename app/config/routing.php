@@ -1,6 +1,6 @@
 <?php
 
-    $url = array_slice(explode("/", $_SERVER['REQUEST_URI']), -1);
+    $url = array_slice(explode("/", $_SERVER['REQUEST_URI']), 1);
 
     if (empty($_SESSION['user'])) {
 
@@ -26,7 +26,28 @@
                 break;
 
             case "accounts":
-                $requested_page = '../app/views/pages/accounts.php';
+
+                if (@$url[1] === "add") {
+
+                    $requested_page = '../app/views/pages/accounts/add.php';
+                    $page_title = 'Toevoegen > Accounts';
+                    break;
+
+                } else if (@$url[1] === "edit") {
+
+                    $requested_page = '../app/views/pages/accounts/edit.php';
+                    $page_title = 'Bewerken > Accounts';
+                    break;
+
+                } else if (@$url[1] === "delete") {
+
+                    $requested_page = '../app/views/pages/accounts/delete.php';
+                    $page_title = 'Accounts';
+                    break;
+
+                }
+
+                $requested_page = '../app/views/pages/accounts/accounts.php';
                 $page_title = 'Accounts';
                 break;
 

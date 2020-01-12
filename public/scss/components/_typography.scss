@@ -20,6 +20,16 @@ a {
     text-decoration: none;
 }
 
+button {
+    a {
+        color: white;
+        transition: 0.2s;
+    }
+    &:hover {
+        a { color: $black !important; }
+    }
+}
+
 i {
     &:hover {
         animation-name: hover_shake;

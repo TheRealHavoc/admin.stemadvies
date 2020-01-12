@@ -4,7 +4,7 @@
             <a href="/">
                 <h6>Partijen</h6>
                 <div class="line hover"></div>
-                <?php if ($page_title === "Partijen"): ?>
+                <?php if ($url[0] === ""): ?>
                     <div class="line active"></div>
                 <?php endif; ?>
             </a>
@@ -13,7 +13,7 @@
             <a href="/stellingen">
                 <h6>Stellingen</h6>
                 <div class="line hover"></div>
-                <?php if ($page_title === "Stellingen"): ?>
+                <?php if ($url[0] === "stellingen"): ?>
                     <div class="line active"></div>
                 <?php endif; ?>
             </a>
@@ -22,7 +22,7 @@
             <a href="/accounts">
                 <h6>Accounts</h6>
                 <div class="line hover"></div>
-                <?php if ($page_title === "Accounts"): ?>
+                <?php if ($url[0] === "accounts"): ?>
                     <div class="line active"></div>
                 <?php endif; ?>
             </a>
