@@ -362,6 +362,11 @@ html body table tbody {
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
+html body table tbody tr {
+  background: inherit;
+  cursor: pointer;
+}
+
 html body table tbody tr:not(:last-child) {
   border-bottom: 1px solid #EBEBEB;
 }
@@ -379,8 +384,19 @@ html body table tbody #misc .menu:nth-child(even) {
   background: #EBEBEB;
 }
 
-html body table #id, html body table #misc {
+html body table #id {
   width: 50px;
+}
+
+html body table #misc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+}
+
+html body table #misc a:first-child {
+  margin-right: 6px;
 }
 
 html body table #created_on, html body table #last_edited, html body table #last_login {

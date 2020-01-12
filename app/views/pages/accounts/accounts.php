@@ -53,7 +53,18 @@
                                 <td id="created_on"><span><?=$user[4];?></span></td>
                                 <td id="last_edited"><span><?=$user[5];?></span></td>
                                 <td id="last_login"><span><?=$user[6];?></span></td>
-                                <td id="misc"><a href="/?edit=ac_<?=$user[0];?>"><h2>:</h2></a></td>
+                                <td id="misc">
+                                    <a href="/accounts/edit/<?=$user[0];?>">
+                                        <h2>
+                                            <i class="far fa-edit"></i>
+                                        </h2>
+                                    </a>
+                                    <a href="/accounts/delete/<?=$user[0];?>">
+                                        <h2>
+                                            <i class="far fa-trash-alt"></i>
+                                        </h2>
+                                    </a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
 

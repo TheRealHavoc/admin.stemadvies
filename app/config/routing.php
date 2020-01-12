@@ -30,19 +30,23 @@
                 if (@$url[1] === "add") {
 
                     $requested_page = '../app/views/pages/accounts/add.php';
-                    $page_title = 'Toevoegen > Accounts';
+                    $page_title = 'Account toevoegen';
                     break;
 
                 } else if (@$url[1] === "edit") {
 
+                    $pointer = @$url[2];
+
                     $requested_page = '../app/views/pages/accounts/edit.php';
-                    $page_title = 'Bewerken > Accounts';
+                    $page_title = 'Account bewerken';
                     break;
 
                 } else if (@$url[1] === "delete") {
 
+                    $pointer = @$url[2];
+
                     $requested_page = '../app/views/pages/accounts/delete.php';
-                    $page_title = 'Accounts';
+                    $page_title = 'Account verwijderen';
                     break;
 
                 }

@@ -18,9 +18,12 @@ table {
         background: $white;
         box-shadow: $shadow;
         tr {
+            background: inherit;
             &:not(:last-child) {
                 border-bottom: 1px solid $lightgrey;
             }
+
+            cursor: pointer;
         }
         #misc {
             .toggle {
@@ -42,9 +45,20 @@ table {
         
     }
 
-    #id, #misc {
+    #id {
         width: 50px;
     }
+
+    #misc {
+        display: flex;
+        width: 50px;
+        a {
+            &:first-child {
+                margin-right: 6px;
+            }
+        }
+    }
+
     #created_on, #last_edited, #last_login {
         width: 220px;
     }
