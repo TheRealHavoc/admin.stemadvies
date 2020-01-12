@@ -40,7 +40,7 @@
                             <tr>
                                 <td colspan="8"><span>Something went wrong.</span></td>
                             </tr>
-                        <?php endif; ?>
+                        <?php else: ?>
 
                         <?php foreach ($res as $key): ?>
                             <tr>
@@ -63,6 +63,8 @@
                                 </td>
                             </tr>
                         <?php endforeach; ?>
+
+                        <?php endif; ?>
 
                     </tbody>
                 </table>
