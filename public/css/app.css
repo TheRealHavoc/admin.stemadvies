@@ -362,11 +362,6 @@ html body table tbody {
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
-html body table tbody tr {
-  background: inherit;
-  cursor: pointer;
-}
-
 html body table tbody tr:not(:last-child) {
   border-bottom: 1px solid #EBEBEB;
 }

@@ -1,11 +1,11 @@
 <?php 
 
     include '../app/views/sections/header.php'; 
-    include '../app/models/objects/account.php';
+    include '../app/models/objects/party.php';
 
-    $account = new Account($db);
+    $party = new Party($db);
 
-    $res = $account->getAll();
+    $res = $party->getAll();
 
 ?>
 
@@ -27,12 +27,10 @@
                     <thead>
                         <tr>
                             <th id="id"><h2>ID</h2></th>
-                            <th id="username"><h2>Gebruiker</h2></th>
-                            <th id="firstname"><h2>Voornaam</h2></th>
-                            <th id="lastname"><h2>Achternaam</h2></th>
+                            <th id="username"><h2>Naam</h2></th>
+                            <th id="firstname"><h2>Voorzitter</h2></th>
                             <th id="created_on"><h2>Aangemaakt op</h2></th>
                             <th id="last_edited"><h2>Bewerkt op</h2></th>
-                            <th id="last_login"><h2>Laatste login</h2></th>
                             <th id="misc"></th>
                         </tr>
                     </thead>
@@ -51,8 +49,6 @@
                                 <td id="firstname"><span><?=$key[2];?></span></td>
                                 <td id="lastname"><span><?=$key[3];?></span></td>
                                 <td id="created_on"><span><?=$key[4];?></span></td>
-                                <td id="last_edited"><span><?=$key[5];?></span></td>
-                                <td id="last_login"><span><?=$key[6];?></span></td>
                                 <td id="misc">
                                     <a href="/accounts/edit/<?=$key[0];?>">
                                         <h2>

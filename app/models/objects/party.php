@@ -1,18 +1,15 @@
 <?php
 
-    class Account {
+    class Party {
 
         private $conn;
         
         public $id;
-        public $username;
-        public $firstname;
-        public $lastname;
-        public $password;
+        public $name;
+        public $chairman;
         
         private $created_on;
         private $last_edited;
-        private $last_login;
 
         public function __construct($db) {
             $this->conn = $db;
@@ -21,7 +18,7 @@
         function getAll() {
             
             $sql = $this->conn->prepare("
-                SELECT `id`, `username`, `firstname`, `lastname`, `created_on`, `last_edited`, `last_login` FROM `users`
+                SELECT `id`, `name`, `chairman`, `created_on`, `last_edited` FROM `parties`
             ");
 
             if (!$sql->execute()) return false;

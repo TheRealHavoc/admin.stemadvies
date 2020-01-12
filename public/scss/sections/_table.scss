@@ -18,12 +18,9 @@ table {
         background: $white;
         box-shadow: $shadow;
         tr {
-            background: inherit;
             &:not(:last-child) {
                 border-bottom: 1px solid $lightgrey;
             }
-
-            cursor: pointer;
         }
         #misc {
             .toggle {
