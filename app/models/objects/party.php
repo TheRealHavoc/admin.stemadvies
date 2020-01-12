@@ -16,7 +16,7 @@
         }
 
         function getAll() {
-            
+
             $sql = $this->conn->prepare("
                 SELECT `id`, `name`, `chairman`, `created_on`, `last_edited` FROM `parties`
             ");
@@ -30,6 +30,20 @@
         }
 
         function add() {
+
+            $sql = $this->conn->prepare("
+            INSERT INTO `parties` 
+                (`id`, `name`, `chairman`, `created_on`, `last_edited`) 
+            VALUES 
+                (NULL, :name, :chairman, current_timestamp(), current_timestamp());
+            ");
+
+            $sql->bindParam(':name', $this->name);
+            $sql->bindParam(':chairman', $this->chairman);
+
+            if (!$sql->execute()) return false;
+
+            return true;
 
         }
 
