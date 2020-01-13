@@ -16,7 +16,7 @@
         $party->prog = 100 - $_POST['topbottom'];
         $party->cons = $_POST['topbottom'];
 
-        $party->add();
+        if ($party->add()) header("location:/");
 
     }
 

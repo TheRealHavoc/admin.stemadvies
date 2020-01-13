@@ -33,6 +33,23 @@
 
         }
 
+        function getSingle() {
+
+            $sql = $this->conn->prepare("
+                SELECT `id`, `name`, `chairman`, `created_on`, `last_edited` FROM `parties`
+                WHERE `id` = :id
+            ");
+
+            $sql->bindParam(':id', $this->id);
+
+            if (!$sql->execute()) return false;
+
+            if (empty($res = $sql->fetchall())) return false;
+
+            return $res;
+
+        }
+
         function add() {
 
             $sql = $this->conn->prepare("
@@ -61,6 +78,28 @@
             $sql->bindParam(':right', $this->right);
             $sql->bindParam(':prog', $this->prog);
             $sql->bindParam(':cons', $this->cons);
+
+            if (!$sql->execute()) return false;
+
+            return true;
+
+        }
+
+        function delete() {
+
+            $sql = $this->conn->prepare("
+                DELETE FROM `spectrum` WHERE `party_id` = :id
+            ");
+
+            $sql->bindParam(':id', $this->id);
+
+            if (!$sql->execute()) return false;
+
+            $sql = $this->conn->prepare("
+                DELETE FROM `parties` WHERE `id` = :id
+            ");
+
+            $sql->bindParam(':id', $this->id);
 
             if (!$sql->execute()) return false;
 
