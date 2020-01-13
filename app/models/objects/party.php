@@ -47,6 +47,8 @@
 
             if (!$sql->execute()) return false;
 
+            $id = $this->conn->lastInsertId();
+
             $sql = $this->conn->prepare("
                 INSERT INTO `spectrum` 
                     (`party_id`, `left_wing`, `right_wing`, `progressive`, `conservative`) 
@@ -54,11 +56,11 @@
                     (:id, :left, :right, :prog, :cons);
             ");
 
-            $sql->bindParam(':id', $this->conn->lastInsertId());
-            $sql->bindParam(':left', $left);
-            $sql->bindParam(':right', $right);
-            $sql->bindParam(':prog', $prog);
-            $sql->bindParam(':cons', $cons);
+            $sql->bindParam(':id', $id);
+            $sql->bindParam(':left', $this->left);
+            $sql->bindParam(':right', $this->right);
+            $sql->bindParam(':prog', $this->prog);
+            $sql->bindParam(':cons', $this->cons);
 
             if (!$sql->execute()) return false;
 
