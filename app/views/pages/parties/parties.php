@@ -50,6 +50,11 @@
                                 <td id="lastname"><span><?=$key[3];?></span></td>
                                 <td id="created_on"><span><?=$key[4];?></span></td>
                                 <td id="misc">
+                                    <a href="/partijen/<?=$key[0];?>">
+                                        <h2>
+                                            <i class="far fa-eye"></i>
+                                        </h2>
+                                    </a>
                                     <a href="/partijen/edit/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-edit"></i>

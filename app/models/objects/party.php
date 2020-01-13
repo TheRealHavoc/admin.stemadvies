@@ -7,6 +7,10 @@
         public $id;
         public $name;
         public $chairman;
+        public $left;
+        public $right;
+        public $prog;
+        public $cons;
         
         private $created_on;
         private $last_edited;
@@ -40,6 +44,21 @@
 
             $sql->bindParam(':name', $this->name);
             $sql->bindParam(':chairman', $this->chairman);
+
+            if (!$sql->execute()) return false;
+
+            $sql = $this->conn->prepare("
+                INSERT INTO `spectrum` 
+                    (`party_id`, `left_wing`, `right_wing`, `progressive`, `conservative`) 
+                VALUES 
+                    (:id, :left, :right, :prog, :cons);
+            ");
+
+            $sql->bindParam(':id', $this->conn->lastInsertId());
+            $sql->bindParam(':left', $left);
+            $sql->bindParam(':right', $right);
+            $sql->bindParam(':prog', $prog);
+            $sql->bindParam(':cons', $cons);
 
             if (!$sql->execute()) return false;
 
