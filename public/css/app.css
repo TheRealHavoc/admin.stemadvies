@@ -227,6 +227,18 @@ html .toggle:hover {
   opacity: 0.6;
 }
 
+html .misc_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  float: right;
+}
+
+html .misc_menu a:not(:last-child) {
+  margin-right: 8px;
+}
+
 html body {
   background: #EBEBEB;
 }
@@ -393,33 +405,8 @@ html body table tbody tr:not(:last-child) {
   border-bottom: 1px solid #EBEBEB;
 }
 
-html body table tbody #misc .menu {
-  position: absolute;
-  float: right;
-  -webkit-transform: translate(-110%, calc(-100% + 12px));
-          transform: translate(-110%, calc(-100% + 12px));
-  padding: 12px;
-  z-index: 9;
-}
-
-html body table tbody #misc .menu:nth-child(even) {
-  background: #EBEBEB;
-}
-
 html body table #id {
   width: 50px;
-}
-
-html body table #misc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: right;
-  float: right;
-}
-
-html body table #misc a:not(:last-child) {
-  margin-right: 8px;
 }
 
 html body table #created_on, html body table #last_edited, html body table #last_login {

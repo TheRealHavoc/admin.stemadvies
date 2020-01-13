@@ -26,7 +26,7 @@
             <?php if ($res === false): ?>
                 <span>Kan de opgevraagde informatie niet vinden.</span>
             <?php else: ?>
-                <span>Weet je zeker dat je deze partij wilt verwijderen?</span>
+                <span>Weet je zeker dat je de partij wilt verwijderen?</span>
             <?php endif; ?>
 
         </div>

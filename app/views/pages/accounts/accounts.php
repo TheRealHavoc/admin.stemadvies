@@ -53,7 +53,7 @@
                                 <td id="created_on"><span><?=$key[4];?></span></td>
                                 <td id="last_edited"><span><?=$key[5];?></span></td>
                                 <td id="last_login"><span><?=$key[6];?></span></td>
-                                <td id="misc">
+                                <td class="misc_menu" id="misc">
                                     <a href="/accounts/edit/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-edit"></i>

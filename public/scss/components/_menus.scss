@@ -1,0 +1,10 @@
+.misc_menu {
+    display: flex;
+    text-align: right;
+    float: right;
+    a {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}

@@ -22,21 +22,6 @@ table {
                 border-bottom: 1px solid $lightgrey;
             }
         }
-        #misc {
-            .toggle {
-
-            }
-            .menu {
-                position: absolute;
-                float: right;
-                transform: translate(-110%, calc(-100% + 12px));
-                padding: 12px;
-                z-index: 9;
-                &:nth-child(even) {
-                    background: $lightgrey;
-                }
-            }
-        }
     }
     tfoot {
         
@@ -44,17 +29,6 @@ table {
 
     #id {
         width: 50px;
-    }
-
-    #misc {
-        display: flex;
-        text-align: right;
-        float: right;
-        a {
-            &:not(:last-child) {
-                margin-right: 8px;
-            }
-        }
     }
 
     #created_on, #last_edited, #last_login {

@@ -49,6 +49,14 @@
                     $page_title = 'Partij verwijderen';
                     break;
 
+                } else if (ctype_digit(@$url[1])) {
+
+                    $pointer = @$url[1];
+
+                    $requested_page = '../app/views/pages/parties/view.php';
+                    $page_title = 'Partij tonen';
+                    break;
+
                 }
 
                 break;

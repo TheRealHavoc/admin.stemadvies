@@ -49,7 +49,7 @@
                                 <td id="chairman"><span><?=$key[2];?></span></td>
                                 <td id="lastname"><span><?=$key[3];?></span></td>
                                 <td id="created_on"><span><?=$key[4];?></span></td>
-                                <td id="misc">
+                                <td class="misc_menu" id="misc">
                                     <a href="/partijen/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-eye"></i>
