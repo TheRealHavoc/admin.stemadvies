@@ -54,7 +54,7 @@
                     $pointer = @$url[1];
 
                     $requested_page = '../app/views/pages/parties/view.php';
-                    $page_title = 'Partij tonen';
+                    $page_title = 'Partij overzicht';
                     break;
 
                 }
