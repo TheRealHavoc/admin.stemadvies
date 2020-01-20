@@ -92,7 +92,32 @@
                 break;
 
             case "stellingen":
-                $requested_page = '../app/views/pages/statements.php';
+
+                if (@$url[1] === "add") {
+
+                    $requested_page = '../app/views/pages/statements/add.php';
+                    $page_title = 'Stelling toevoegen';
+                    break;
+
+                } else if (@$url[1] === "edit") {
+
+                    $pointer = @$url[2];
+
+                    $requested_page = '../app/views/pages/statements/edit.php';
+                    $page_title = 'Stelling bewerken';
+                    break;
+
+                } else if (@$url[1] === "delete") {
+
+                    $pointer = @$url[2];
+
+                    $requested_page = '../app/views/pages/statements/delete.php';
+                    $page_title = 'Stelling verwijderen';
+                    break;
+
+                }
+
+                $requested_page = '../app/views/pages/statements/statements.php';
                 $page_title = 'Stellingen';
                 break;
             

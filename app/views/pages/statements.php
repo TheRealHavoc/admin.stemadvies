@@ -1,1 +1,0 @@
-<?php include '../app/views/sections/header.php'; ?>

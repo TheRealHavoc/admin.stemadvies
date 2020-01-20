@@ -1,11 +1,11 @@
 <?php 
 
     include '../app/views/sections/header.php'; 
-    include '../app/models/objects/party.php';
+    include '../app/models/objects/statement.php';
 
-    $party = new Party($db);
+    $statement = new Statement($db);
 
-    $res = $party->getAll();
+    $res = $statement->getAll();
 
 ?>
 
@@ -27,15 +27,14 @@
                     <thead>
                         <tr>
                             <th id="id"><h2>ID</h2></th>
-                            <th id="name"><h2>Naam</h2></th>
-                            <th id="chairman"><h2>Voorzitter</h2></th>
+                            <th id="statement"><h2>Vraag</h2></th>
                             <th id="created_on"><h2>Aangemaakt op</h2></th>
                             <th id="last_edited"><h2>Bewerkt op</h2></th>
                             <th id="misc"></th>
                         </tr>
                     </thead>
                     <tbody>
-
+                        
                         <?php if ($res === false): ?>
                             <tr>
                                 <td colspan="8"><span>Something went wrong.</span></td>
@@ -45,16 +44,10 @@
                         <?php foreach ($res as $key): ?>
                             <tr>
                                 <td id="id"><span><?=$key[0];?></span></td>
-                                <td id="name"><span><?=$key[1];?></span></td>
-                                <td id="chairman"><span><?=$key[2];?></span></td>
-                                <td id="lastname"><span><?=$key[3];?></span></td>
-                                <td id="created_on"><span><?=$key[4];?></span></td>
+                                <td id="statement"><span><?=$key[1];?></span></td>
+                                <td id="created_on"><span><?=$key[2];?></span></td>
+                                <td id="last_edited"><span><?=$key[3];?></span></td>
                                 <td class="misc_menu" id="misc">
-                                    <a href="/<?=strtolower($page_title)?>/<?=$key[0];?>">
-                                        <h2>
-                                            <i class="far fa-eye"></i>
-                                        </h2>
-                                    </a>
                                     <a href="/<?=strtolower($page_title)?>/edit/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-edit"></i>

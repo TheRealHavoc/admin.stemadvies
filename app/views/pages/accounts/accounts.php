@@ -17,7 +17,7 @@
                     <h1><?=$page_title?></h1>
                 </div>
                 <div class="col">
-                    <a href="/accounts/add"><button>+ Nieuw</button></a>
+                    <a href="/<?=strtolower($page_title)?>/add"><button>+ Nieuw</button></a>
                 </div>
             </div>
         </div>
@@ -54,12 +54,12 @@
                                 <td id="last_edited"><span><?=$key[5];?></span></td>
                                 <td id="last_login"><span><?=$key[6];?></span></td>
                                 <td class="misc_menu" id="misc">
-                                    <a href="/accounts/edit/<?=$key[0];?>">
+                                    <a href="/<?=strtolower($page_title)?>/edit/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-edit"></i>
                                         </h2>
                                     </a>
-                                    <a href="/accounts/delete/<?=$key[0];?>">
+                                    <a href="/<?=strtolower($page_title)?>/delete/<?=$key[0];?>">
                                         <h2>
                                             <i class="far fa-trash-alt"></i>
                                         </h2>
