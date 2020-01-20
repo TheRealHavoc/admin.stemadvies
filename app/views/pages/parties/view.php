@@ -33,8 +33,13 @@
             </div>
         </div>
         <div class="body main-table">
-            <div>
-
+            <div class="grid-2">
+                <div class="panel col">
+                    f
+                </div>
+                <div class="panel col">
+                    f
+                </div>
             </div>                
         </div>
     </div>

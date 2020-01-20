@@ -4,7 +4,7 @@
             <a href="/">
                 <h6>Partijen</h6>
                 <div class="line hover"></div>
-                <?php if ($url[0] === ""): ?>
+                <?php if ($url[0] === "" || $url[0] === "partijen"): ?>
                     <div class="line active"></div>
                 <?php endif; ?>
             </a>

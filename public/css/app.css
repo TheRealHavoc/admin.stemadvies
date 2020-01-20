@@ -66,6 +66,12 @@ html .centered {
           transform: translate(-50%, -50%);
 }
 
+html .panel {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
 html .main-head .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +85,23 @@ html .main-head .row .col:first-child {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+html .grid-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .grid-2 .col:first-child {
+  margin-right: 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+html .grid-2 .col:last-child {
+  width: 40%;
 }
 
 html h1 {

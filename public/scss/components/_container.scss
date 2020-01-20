@@ -19,6 +19,11 @@
     transform: translate(-50%, -50%);
 }
 
+.panel {
+    background: $white;
+    box-shadow: $shadow;
+}
+
 .main-head {
     .row {
         display: flex;
@@ -27,6 +32,19 @@
             &:first-child {
                 flex-grow: 1;
             }
+        }
+    }
+}
+
+.grid-2 {
+    display: flex;
+    .col {
+        &:first-child {
+            margin-right: 24px;
+            flex-grow: 1;
+        }
+        &:last-child {
+            width: 40%;
         }
     }
 }
