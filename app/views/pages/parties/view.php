@@ -88,19 +88,19 @@
                 <div class="panel col">
                     <div class="list">
                         <div class="row">
-                            <h2>Naam</h2>
+                            <p>Naam</p>
                             <h1><?=$pa_res["name"]?></h1>
                         </div>
                         <div class="row">
-                            <h2>Voorzitter</h2>
+                            <p>Voorzitter</p>
                             <h1><?=$pa_res["chairman"]?></h1>
                         </div>
                         <div class="row">
-                            <h2>Aangemaakt op</h2>
+                            <p>Aangemaakt op</p>
                             <h1><?=$pa_res["created_on"]?></h1>
                         </div>
                         <div class="row">
-                            <h2>Bewerkt op</h2>
+                            <p>Bewerkt op</p>
                             <h1><?=$pa_res["last_edited"]?></h1>
                         </div>
                     </div>

@@ -45,8 +45,7 @@
             flex-grow: 1;
         }
         &:last-child {
-            margin-top: 51px;
-            width: 40%;
+            min-width: 30%;
         }
     }
 }

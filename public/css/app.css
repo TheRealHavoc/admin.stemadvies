@@ -105,8 +105,7 @@ html .grid-2 .col:first-child {
 }
 
 html .grid-2 .col:last-child {
-  margin-top: 51px;
-  width: 40%;
+  min-width: 30%;
 }
 
 html h1 {
@@ -274,11 +273,11 @@ html .misc_menu a:not(:last-child) {
   margin-right: 8px;
 }
 
-html .list .row h2, html .list .row h1 {
+html .list .row p, html .list .row h1 {
   padding-left: 12px;
 }
 
-html .list .row h2 {
+html .list .row p {
   padding-top: 12px;
 }
 
