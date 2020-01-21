@@ -44,7 +44,7 @@
 
             if (!$sql->execute()) return false;
 
-            if (empty($res = $sql->fetchall())) return false;
+            if (empty($res = $sql->fetch())) return false;
 
             return $res;
 

@@ -86,10 +86,27 @@ input[type="range"] {
     }
 }
 
-.toggle {
-    cursor: pointer;
-    transition: 0.1s;
-    &:hover {
-        opacity: 0.6;
+.st-answer {
+
+    border-radius: 50%;
+    width: 27px;
+
+    &.st-yes {
+        &.checked {
+            background: green;
+        }
     }
+
+    &.st-no {
+        &.checked {
+            background: red;
+        }
+    }
+
+    &.st-none {
+        &.checked {
+            background: orange;
+        }
+    }
+
 }

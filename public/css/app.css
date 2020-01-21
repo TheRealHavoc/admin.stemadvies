@@ -93,6 +93,10 @@ html .grid-2 {
   display: flex;
 }
 
+html .grid-2 .col {
+  height: 0%;
+}
+
 html .grid-2 .col:first-child {
   margin-right: 24px;
   -webkit-box-flex: 1;
@@ -101,6 +105,7 @@ html .grid-2 .col:first-child {
 }
 
 html .grid-2 .col:last-child {
+  margin-top: 51px;
   width: 40%;
 }
 
@@ -240,14 +245,21 @@ html .input .line.focus {
   float: left;
 }
 
-html .toggle {
-  cursor: pointer;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+html .st-answer {
+  border-radius: 50%;
+  width: 27px;
 }
 
-html .toggle:hover {
-  opacity: 0.6;
+html .st-answer.st-yes.checked {
+  background: green;
+}
+
+html .st-answer.st-no.checked {
+  background: red;
+}
+
+html .st-answer.st-none.checked {
+  background: orange;
 }
 
 html .misc_menu {
@@ -260,6 +272,22 @@ html .misc_menu {
 
 html .misc_menu a:not(:last-child) {
   margin-right: 8px;
+}
+
+html .list .row h2, html .list .row h1 {
+  padding-left: 12px;
+}
+
+html .list .row h2 {
+  padding-top: 12px;
+}
+
+html .list .row h1 {
+  padding-bottom: 12px;
+}
+
+html .list .row:not(:last-child) {
+  border-bottom: 1px solid #EBEBEB;
 }
 
 html body {
