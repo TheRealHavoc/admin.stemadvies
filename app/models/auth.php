@@ -18,7 +18,7 @@
                 $error = "Er ging iets fout. Heb je de juiste gegevens ingevuld?";
             } else {
 
-                $res = $user->updateLastLogin();
+                $user->updateLastLogin();
 
                 $_SESSION['user']['id'] = $res['id'];
                 $_SESSION['user']['username'] = $res['username'];

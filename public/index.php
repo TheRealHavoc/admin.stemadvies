@@ -1,4 +1,8 @@
-<?php require_once '../app/config/core.php'; ?>
+<?php require_once '../app/config/core.php'; 
+
+    var_dump($_SESSION);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
