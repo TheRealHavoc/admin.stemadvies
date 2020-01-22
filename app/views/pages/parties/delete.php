@@ -4,13 +4,11 @@
 
     $party = new Party($db);
 
-    $party->id = $pointer;
-
     $res = $party->getSingle();
 
     if (isset($_POST['delete'])) {
 
-        $party->id = $pointer;
+        $party->id = $pointer;s
 
         if ($party->delete()) header("location:/");
 

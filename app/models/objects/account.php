@@ -42,30 +42,39 @@
 
             if (!$sql->execute()) return false;
 
-            if (empty($res = $sql->fetchall())) return false;
+            if (empty($res = $sql->fetch())) return false;
 
             return $res;
 
         }
 
-        function add() {
+        function getSingleById() {
 
             $sql = $this->conn->prepare("
-                INSERT INTO `users` 
-                    (`username`, `firstname`, `lastname`, `password`, `created_on`, `last_edited`, `last_login`)
-                VALUES 
-                    (:username, :firstname, :lastname, :password, current_timestamp(), current_timestamp(), NULL);
+                SELECT `username` FROM `users` WHERE `id` = :id
             ");
 
-            $sql->bindParam(':username', $this->username);
-            $sql->bindParam(':firstname', $this->firstname);
-            $sql->bindParam(':lastname', $this->lastname);
-            $sql->bindParam(':password', $this->password);
+            $sql->bindParam(':id', $this->id);
+
+            if (!$sql->execute()) return false;
+
+            if (empty($res = $sql->fetch())) return false;
+
+            return $res;
+
+        }
+
+        function delete() {
+
+            $sql = $this->conn->prepare("
+                DELETE FROM `users` WHERE `id` = :id
+            ");
+
+            $sql->bindParam(':id', $this->id);
 
             if (!$sql->execute()) return false;
 
             return true;
-
 
         }
 
