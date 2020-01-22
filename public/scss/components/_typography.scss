@@ -31,8 +31,6 @@ button {
 }
 
 i {
-    &:hover {
-        animation-name: hover_shake;
-        animation-duration: 0.3s;
-    }
+    animation-name: spawn_pop;
+    animation-duration: 0.6s;
 }
