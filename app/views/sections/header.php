@@ -6,7 +6,10 @@
                 <h1>Stemadvies</h1>
             </div>
             <div class="col">
-                <a href="https://github.com/Dakpaneel/admin.stemadvies"><span><i class="fab fa-github"></i></span></a>
+                <p>Ingelogd als: </p>
+                <h2>
+                    <?php echo $_SESSION['user']['firstname'] . " " . $_SESSION['user']['lastname'];?>
+                </h2>
             </div>
         </div>
         <div class="row">

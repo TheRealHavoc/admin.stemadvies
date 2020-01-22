@@ -18,6 +18,12 @@
                 <input type="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
                 <div class="line focus"></div>
             </div>
+            
+            <div class="input">
+                <div class="error">
+                    <p><?=@$error;?></p>
+                </div>
+            </div>
 
             <div class="row">
                 <input type="submit" name="login" value="<?=$page_title?>">
