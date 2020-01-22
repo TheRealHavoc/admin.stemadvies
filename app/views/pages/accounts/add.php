@@ -33,7 +33,7 @@
         </div>
         <div class="body">
 
-        <form action="" method="POST">
+        <form class="basic-form" action="" method="POST">
             <div class="wrapper">
                 <div class="body">
 

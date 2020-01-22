@@ -1,4 +1,4 @@
-<form class="centered" action="" method="POST">
+<form class="basic-form centered" action="" method="POST">
     <div class="wrapper">
         <div class="head">
             <h1>404</h1>

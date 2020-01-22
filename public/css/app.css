@@ -261,7 +261,7 @@ html .st-answer.st-none.checked {
   background: orange;
 }
 
-html .misc_menu {
+html .misc_menu, html .answer_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,27 +391,27 @@ html body main .wrapper .head, html body main .wrapper .body {
   margin-bottom: 12px;
 }
 
-html body form {
+html body .basic-form {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   width: 560px;
 }
 
-html body form .wrapper {
+html body .basic-form .wrapper {
   padding: 24px;
 }
 
-html body form .wrapper .head {
+html body .basic-form .wrapper .head {
   padding-bottom: 12px;
   border-bottom: 1px solid #9E9E9E;
 }
 
-html body form .wrapper .body {
+html body .basic-form .wrapper .body {
   padding-top: 12px;
 }
 
-html body form .wrapper .body .row {
+html body .basic-form .wrapper .body .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

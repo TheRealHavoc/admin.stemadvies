@@ -60,12 +60,14 @@
                                 <tr>
                                     <td id="id"><span><?=$key[0];?></span></td>
                                     <td id="statement"><span><?=$key[1];?></span></td>
-                                    <td class="misc_menu" id="misc">
-                                    <a href="/partijen/<?=$pointer;?>">
-                                        <h2 class="st-answer st-yes" data-action="answer" data-type="yes">
-                                            <i class="fas fa-check"></i>
-                                        </h2>
-                                    </a>
+                                    <td class="answer_menu" id="answer">
+                                    <form action="">
+                                        <a href="/partijen/<?=$pointer;?>">
+                                            <h2 class="st-answer st-yes" data-action="answer" data-type="yes">
+                                                <i class="fas fa-check"></i>
+                                            </h2>
+                                        </a>
+                                    </form>
                                     <a href="/partijen/<?=$pointer;?>" data-action="answer" data-type="no">
                                         <h2 class="st-answer st-no">
                                             <i class="fas fa-times"></i>

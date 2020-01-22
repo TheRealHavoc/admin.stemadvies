@@ -1,10 +1,13 @@
-.misc_menu {
+.misc_menu, .answer_menu {
     display: flex;
     text-align: right;
     float: right;
+}
+
+.misc_menu {
     a {
         &:not(:last-child) {
             margin-right: 8px;
         }
-    }
+    }   
 }

@@ -1,6 +1,6 @@
 <?php include '../app/models/auth.php'; ?>
 
-<form class="centered" action="" method="POST">
+<form class="basic-form centered" action="" method="POST">
     <div class="wrapper">
         <div class="head">
             <h1><?=$page_title?></h1>
