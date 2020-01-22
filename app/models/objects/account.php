@@ -64,6 +64,26 @@
 
         }
 
+        function add() {
+
+            $sql = $this->conn->prepare("
+                INSERT INTO `users` 
+                    (`username`, `firstname`, `lastname`, `password`, `created_on`, `last_edited`, `last_login`)
+                VALUES 
+                    (:username, :firstname, :lastname, :password, current_timestamp(), current_timestamp(), NULL);
+            ");
+
+            $sql->bindParam(':username', $this->username);
+            $sql->bindParam(':firstname', $this->firstname);
+            $sql->bindParam(':lastname', $this->lastname);
+            $sql->bindParam(':password', $this->password);
+
+            if (!$sql->execute()) return false;
+
+            return true;
+
+        }
+
         function delete() {
 
             $sql = $this->conn->prepare("
